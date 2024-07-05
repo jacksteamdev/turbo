@@ -121,3 +121,5 @@ unsafe impl<T: ResolvedValue + ?Sized> ResolvedValue for Arc<T> {}
 unsafe impl<T: ResolvedValue, E: ResolvedValue> ResolvedValue for Result<T, E> {}
 unsafe impl<T: ResolvedValue + ?Sized> ResolvedValue for Mutex<T> {}
 unsafe impl<T: ResolvedValue + ?Sized> ResolvedValue for RefCell<T> {}
+
+pub use turbo_tasks_macros::ResolvedValue;
